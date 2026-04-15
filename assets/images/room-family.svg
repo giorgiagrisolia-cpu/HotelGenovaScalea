@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder camera family</title>
+  <desc id="desc">Grafica segnaposto per camera familiare.</desc>
+  <rect width="1200" height="900" fill="#efe6d9"/>
+  <rect x="90" y="150" width="1020" height="620" rx="26" fill="#fcfaf6"/>
+  <rect x="180" y="420" width="500" height="170" rx="20" fill="#cfb28b"/>
+  <rect x="730" y="420" width="270" height="145" rx="18" fill="#dcc7aa"/>
+  <rect x="180" y="340" width="500" height="90" rx="18" fill="#b7976f"/>
+  <rect x="730" y="360" width="270" height="70" rx="16" fill="#b7976f"/>
+  <text x="120" y="826" fill="#20312a" font-family="Georgia, serif" font-size="38">Camera familiare</text>
+</svg>

@@ -1,0 +1,107 @@
+@media (min-width: 48rem) {
+  .site-nav {
+    position: static;
+    inset: auto;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .hero,
+  .page-hero,
+  .booking-hero {
+    padding: 3rem 0 5rem;
+  }
+
+  .hero__grid,
+  .page-hero__grid,
+  .booking-hero__grid,
+  .story-grid,
+  .split-section,
+  .contact-grid,
+  .booking-layout,
+  .details-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section__intro--inline {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .rooms-grid,
+  .reasons-grid,
+  .reviews-grid,
+  .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .gallery-card--wide {
+    grid-column: span 2;
+  }
+
+  .field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .floating-whatsapp span:last-child {
+    display: inline;
+  }
+}
+
+@media (min-width: 75rem) {
+  .hero__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+  }
+
+  .page-hero__grid,
+  .booking-hero__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2rem;
+  }
+
+  .section {
+    padding: 5.5rem 0;
+  }
+
+  .story-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .reviews-grid,
+  .events-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .booking-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}

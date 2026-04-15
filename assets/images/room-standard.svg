@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder camera standard</title>
+  <desc id="desc">Grafica segnaposto per camera matrimoniale standard.</desc>
+  <rect width="1200" height="900" fill="#f2eadf"/>
+  <rect x="110" y="180" width="980" height="540" rx="28" fill="#fbf8f1"/>
+  <rect x="240" y="350" width="720" height="220" rx="22" fill="#d9bf9d"/>
+  <rect x="240" y="300" width="720" height="80" rx="18" fill="#b89c76"/>
+  <rect x="180" y="270" width="40" height="180" fill="#88957b"/>
+  <rect x="980" y="270" width="40" height="180" fill="#88957b"/>
+  <text x="120" y="820" fill="#20312a" font-family="Georgia, serif" font-size="38">Camera matrimoniale standard</text>
+</svg>

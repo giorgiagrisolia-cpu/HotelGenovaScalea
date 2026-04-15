@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder ristorante serale</title>
+  <desc id="desc">Grafica segnaposto per il ristorante e il bar con atmosfera serale.</desc>
+  <rect width="1200" height="900" fill="#d9d0c4"/>
+  <rect x="0" y="0" width="1200" height="340" fill="#20312a"/>
+  <circle cx="955" cy="140" r="74" fill="#e9c88d"/>
+  <rect x="110" y="350" width="980" height="410" rx="28" fill="#f7f2e8"/>
+  <circle cx="330" cy="520" r="95" fill="#b07a4e"/>
+  <circle cx="620" cy="560" r="95" fill="#a46741"/>
+  <circle cx="900" cy="520" r="95" fill="#8e5a39"/>
+  <text x="120" y="835" fill="#20312a" font-family="Georgia, serif" font-size="38">Ristorante e bar serale</text>
+</svg>

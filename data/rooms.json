@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Matrimoniale Standard",
+    "slug": "matrimoniale-standard",
+    "summary": "Una camera essenziale e luminosa, pensata per soggiorni rilassati a pochi passi dal mare e dal centro.",
+    "details": "Ideale per coppie e soggiorni brevi, con comfort contemporanei, accesso indipendente e ambienti funzionali.",
+    "capacity": "2 persone",
+    "size": "18 mq",
+    "view": "Vista interna o scorcio sulla Villa Comunale",
+    "image": "assets/images/room-standard.svg",
+    "featured": true
+  },
+  {
+    "name": "Matrimoniale Superior",
+    "slug": "matrimoniale-superior",
+    "summary": "Piu' ampia e ariosa, con un'atmosfera raffinata e dettagli pensati per chi desidera piu' comfort.",
+    "details": "Perfetta per una pausa sul Tirreno, spesso con affaccio piacevole verso la Villa Comunale e Torre Talao.",
+    "capacity": "2 persone",
+    "size": "22 mq",
+    "view": "Vista Villa Comunale / Torre Talao",
+    "image": "assets/images/room-superior.svg",
+    "featured": true
+  },
+  {
+    "name": "Camera Familiare",
+    "slug": "camera-familiare",
+    "summary": "La soluzione piu' versatile per famiglie o piccoli gruppi che desiderano spazio, praticita' e accesso libero h24.",
+    "details": "Ambienti organizzati per accogliere fino a quattro ospiti con la comodita' di parcheggio privato e ingressi indipendenti.",
+    "capacity": "4 persone",
+    "size": "28 mq",
+    "view": "Vista interna o affaccio aperto",
+    "image": "assets/images/room-family.svg",
+    "featured": true
+  }
+]
