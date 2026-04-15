@@ -59,6 +59,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .section-card--reasons .reasons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .floating-whatsapp span:last-child {
     display: inline;
   }
@@ -109,6 +113,10 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .section-card--reasons .reasons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -119,5 +127,9 @@
 
   .booking-widget__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

@@ -516,6 +516,20 @@ p {
   gap: 0.95rem;
 }
 
+.section-card--reasons {
+  gap: 1.35rem;
+}
+
+.section-card--reasons .reasons-grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.section-card--reasons .reason-card {
+  background: rgba(239, 228, 210, 0.52);
+  box-shadow: none;
+}
+
 .meta-list {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }

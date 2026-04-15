@@ -1,14 +1,14 @@
 {
-  "home-hero": "https://unsplash.com/photos/coastal-italian-town-with-a-beautiful-beach-ACCwzsy1_1A/download?force=true&w=1600&q=80",
-  "history-lounge": "https://unsplash.com/photos/elegant-wooden-paneled-hotel-lobby-with-inviting-seating-0Kkv20z795A/download?force=true&w=1400&q=80",
-  "restaurant-evening": "https://unsplash.com/photos/modern-restaurant-interior-seen-through-glass-doors-at-night-RucMtKnJDr8/download?force=true&w=1400&q=80",
-  "breakfast-terrace": "https://unsplash.com/photos/a-table-filled-with-various-breakfast-dishes-and-drinks-QBlBRC29qTE/download?force=true&w=1400&q=80",
-  "coast-view": "https://unsplash.com/photos/coastal-city-with-beach-and-blue-sea-qQyXrhHwz5A/download?force=true&w=1400&q=80",
-  "coast-view-alt": "https://unsplash.com/photos/rocky-coastline-meets-the-calm-blue-ocean-r3zZ7fNNSfg/download?force=true&w=1400&q=80",
-  "room-standard": "https://unsplash.com/photos/a-hotel-room-with-a-bed-and-television-1b6fWdOEMM8/download?force=true&w=1400&q=80",
-  "room-superior": "https://unsplash.com/photos/a-modern-hotel-room-with-a-bed-and-bathroom-thb9M2F4QTs/download?force=true&w=1400&q=80",
-  "room-family": "https://unsplash.com/photos/a-cozy-hotel-room-with-two-beds-yNfJFVqxyi8/download?force=true&w=1400&q=80",
-  "room-details": "https://unsplash.com/photos/a-modern-and-elegant-hotel-lobby-cAzgaiABdY4/download?force=true&w=1400&q=80",
-  "restaurant-gallery": "https://unsplash.com/photos/restaurant-interior-seen-through-windows-at-night-2c0yp-PhSOk/download?force=true&w=1400&q=80",
-  "restaurant-bar": "https://unsplash.com/photos/a-restaurant-entrance-is-lit-up-at-night-q2yQJkW8rlU/download?force=true&w=1400&q=80"
+  "home-hero": "https://images.unsplash.com/photo-1504163782861-f53c245f6086?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXRhbHklMjBjb2FzdHxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=2200",
+  "history-lounge": "https://images.unsplash.com/photo-1660557989725-f511e9fa6267?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWwlMjBsb2JieXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "restaurant-evening": "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=80&w=1800",
+  "breakfast-terrace": "https://images.unsplash.com/photo-1755493872625-1dcb19e9457e?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "coast-view": "https://images.unsplash.com/photo-1504163782861-f53c245f6086?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXRhbHklMjBjb2FzdHxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "coast-view-alt": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGl0YWx5JTIwY29hc3R8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "room-standard": "https://images.unsplash.com/photo-1549638441-b787d2e11f14?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "room-superior": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjByb29tfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=80&w=1800",
+  "room-family": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=80&w=1800",
+  "room-details": "https://images.unsplash.com/photo-1660557989725-f511e9fa6267?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWwlMjBsb2JieXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800",
+  "restaurant-gallery": "https://images.unsplash.com/photo-1538333581680-29dd4752ddf2?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=80&w=1800",
+  "restaurant-bar": "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=80&w=1800"
 }

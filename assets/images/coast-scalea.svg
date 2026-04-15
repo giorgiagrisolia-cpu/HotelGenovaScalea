@@ -6,5 +6,4 @@
   <rect y="250" width="1200" height="300" fill="#93b7bc"/>
   <path d="M0 550C220 520 280 640 490 620s284-122 474-97 236 90 236 90v287H0z" fill="#d2b997"/>
   <path d="M0 640C210 590 348 720 542 680s282-118 425-95 233 85 233 85v230H0z" fill="#b7976f"/>
-  <text x="120" y="833" fill="#20312a" font-family="Georgia, serif" font-size="38">Costa e mare di Scalea</text>
 </svg>
