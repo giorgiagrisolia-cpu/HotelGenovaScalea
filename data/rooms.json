@@ -8,6 +8,7 @@
     "size": "18 mq",
     "view": "Vista interna o scorcio sulla Villa Comunale",
     "image": "assets/images/room-standard.svg",
+    "imageKey": "room-standard",
     "featured": true
   },
   {
@@ -19,6 +20,7 @@
     "size": "22 mq",
     "view": "Vista Villa Comunale / Torre Talao",
     "image": "assets/images/room-superior.svg",
+    "imageKey": "room-superior",
     "featured": true
   },
   {
@@ -30,6 +32,7 @@
     "size": "28 mq",
     "view": "Vista interna o affaccio aperto",
     "image": "assets/images/room-family.svg",
+    "imageKey": "room-family",
     "featured": true
   }
 ]
