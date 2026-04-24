@@ -3,6 +3,9 @@
   --surface: #fffaf4;
   --surface-strong: #efe2cf;
   --surface-soft: rgba(255, 250, 243, 0.76);
+  --page-accent-rgb: 126, 135, 102;
+  --page-accent: rgb(var(--page-accent-rgb));
+  --page-glow: rgba(239, 228, 210, 0.82);
   --line: rgba(32, 49, 42, 0.1);
   --text: #20312a;
   --muted: #58665f;
@@ -33,13 +36,38 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top, rgba(239, 228, 210, 0.82), transparent 38%),
+    radial-gradient(circle at top, var(--page-glow), transparent 38%),
     linear-gradient(180deg, #fcf9f4 0%, #f5efe6 100%);
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+body.page-home {
+  --page-accent-rgb: 126, 135, 102;
+  --page-glow: rgba(239, 228, 210, 0.82);
+}
+
+body.page-camere {
+  --page-accent-rgb: 95, 121, 110;
+  --page-glow: rgba(224, 235, 228, 0.86);
+}
+
+body.page-food {
+  --page-accent-rgb: 156, 112, 76;
+  --page-glow: rgba(244, 226, 210, 0.88);
+}
+
+body.page-contact {
+  --page-accent-rgb: 82, 112, 118;
+  --page-glow: rgba(223, 236, 237, 0.88);
+}
+
+body.page-booking {
+  --page-accent-rgb: 133, 118, 88;
+  --page-glow: rgba(236, 230, 216, 0.9);
 }
 
 img,
@@ -82,7 +110,7 @@ button:hover,
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--page-accent);
   outline-offset: 3px;
 }
 
@@ -222,9 +250,17 @@ button:hover,
   font-weight: 600;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
-  background: var(--surface-strong);
+.site-nav a:hover:not(.button) {
+  background: rgba(var(--page-accent-rgb), 0.12);
+}
+
+.site-nav a[aria-current="page"]:not(.button) {
+  background: var(--page-accent);
+  color: #fff;
+}
+
+.site-nav .button[aria-current="page"] {
+  box-shadow: 0 0 0 3px rgba(var(--page-accent-rgb), 0.18);
 }
 
 .button,
@@ -251,17 +287,57 @@ button:hover,
   color: var(--text);
 }
 
+.button-secondary:hover {
+  border-color: rgba(var(--page-accent-rgb), 0.28);
+}
+
 .button--full {
   width: 100%;
 }
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--accent-deep);
+  color: rgba(var(--page-accent-rgb), 0.85);
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+.page-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.48rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--page-accent-rgb), 0.2);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--page-accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.page-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.page-summary span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(var(--page-accent-rgb), 0.16);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .hero,
@@ -280,6 +356,7 @@ button:hover,
 .details-grid,
 .events-grid,
 .gallery-grid,
+.page-links-grid,
 .reasons-grid,
 .rooms-grid,
 .reviews-grid,
@@ -758,6 +835,30 @@ textarea {
 
 .notice-card strong {
   color: var(--text);
+}
+
+.page-links-grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.page-link-card {
+  height: 100%;
+  color: inherit;
+}
+
+.page-link-card p {
+  max-width: 32ch;
+}
+
+.page-link-card__cta {
+  color: var(--page-accent);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.page-cta {
+  align-items: start;
 }
 
 .floating-whatsapp {

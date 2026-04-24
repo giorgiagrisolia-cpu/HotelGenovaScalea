@@ -5,32 +5,6 @@ const siteNav = document.querySelector("[data-nav]");
 let imageLibrary = {};
 
 const fallbackData = {
-  reviews: [
-    {
-      name: "Martina R.",
-      rating: 5,
-      source: "Google",
-      text: "Posizione comodissima tra centro e mare, atmosfera autentica e un'energia serale chiara fin da subito. Perfetto per chi vuole vivere Scalea senza troppi filtri."
-    },
-    {
-      name: "Lars H.",
-      rating: 5,
-      source: "Google",
-      text: "Struttura storica con un'identita' autentica. Camera comoda, ottima accoglienza e ristorante davvero vivo nelle ore serali."
-    },
-    {
-      name: "Chiara e Paolo",
-      rating: 4,
-      source: "Google",
-      text: "Abbiamo apprezzato la vicinanza alla spiaggia, il parcheggio privato e la facilita' di accesso. Personale gentile e disponibile."
-    },
-    {
-      name: "Antonio G.",
-      rating: 5,
-      source: "Google",
-      text: "Hotel storico di Scalea con un bel senso di ospitalita'. Bar e ristorante molto frequentati la sera, contatto diretto praticissimo via WhatsApp."
-    }
-  ],
   rooms: [
     {
       name: "Matrimoniale Standard",
@@ -153,28 +127,6 @@ function applyPlaceholderImages(root = document) {
 imageLibrary = fallbackData.images;
 applyPlaceholderImages(document);
 
-function renderStars(rating) {
-  return "&#9733;".repeat(rating) + "&#9734;".repeat(5 - rating);
-}
-
-function renderReviews(reviews) {
-  const container = document.querySelector("[data-reviews]");
-  if (!container) return;
-  container.innerHTML = reviews
-    .map(
-      (review) => `
-        <article class="review-card" data-reveal>
-          <strong>${review.name}</strong>
-          <div class="review-card__stars" aria-label="${review.rating} stelle su 5">${renderStars(review.rating)}</div>
-          <p>${review.text}</p>
-          <p class="mini-copy">${review.source}</p>
-        </article>
-      `
-    )
-    .join("");
-  observeReveal(container.querySelectorAll("[data-reveal]"));
-}
-
 function roomTemplate(room) {
   return `
     <article class="room-card" data-reveal>
@@ -205,12 +157,10 @@ function renderRooms(rooms) {
 }
 
 Promise.all([
-  get("data/reviews.json", "reviews"),
   get("data/rooms.json", "rooms"),
   get("data/images.json", "images")
-]).then(([reviews, rooms, images]) => {
+]).then(([rooms, images]) => {
   imageLibrary = images || {};
   applyPlaceholderImages(document);
-  renderReviews(reviews || []);
   renderRooms(rooms || []);
 });
