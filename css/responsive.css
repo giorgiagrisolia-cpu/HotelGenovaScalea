@@ -64,6 +64,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .carousel__controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .floating-whatsapp span:last-child {
     display: inline;
   }

@@ -81,6 +81,15 @@ function setPageLinkTargets(root = document) {
   root.querySelectorAll("a[href]").forEach((link) => {
     const href = (link.getAttribute("href") || "").trim();
     if (!href || href.startsWith("#") || href.startsWith("tel:") || href.startsWith("mailto:")) return;
+
+    let url;
+    try {
+      url = new URL(href, window.location.href);
+    } catch (error) {
+      return;
+    }
+
+    if (!/^https?:$/.test(url.protocol) || url.origin === window.location.origin) return;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   });
