@@ -70,8 +70,8 @@
 
 @media (min-width: 75rem) {
   .hero__grid {
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 2rem;
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: 3rem;
   }
 
   .page-hero__grid,
@@ -80,7 +80,16 @@
     gap: 2rem;
   }
 
-  .hero__media img,
+  .hero__media {
+    max-width: 35rem;
+    justify-self: end;
+  }
+
+  .hero__media img {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+
   .page-hero__media img,
   .booking-hero__media img {
     aspect-ratio: 4 / 3;

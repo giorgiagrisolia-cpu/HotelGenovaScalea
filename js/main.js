@@ -10,13 +10,13 @@ const fallbackData = {
       name: "Martina R.",
       rating: 5,
       source: "Google",
-      text: "Posizione comodissima tra centro e mare, atmosfera familiare e una cura rara nei dettagli. Perfetto per chi cerca un soggiorno semplice ma di carattere."
+      text: "Posizione comodissima tra centro e mare, atmosfera autentica e un'energia serale chiara fin da subito. Perfetto per chi vuole vivere Scalea senza troppi filtri."
     },
     {
       name: "Lars H.",
       rating: 5,
       source: "Google",
-      text: "Struttura storica con un'identita' autentica. Camera silenziosa, ottima accoglienza e ristorante molto piacevole anche la sera."
+      text: "Struttura storica con un'identita' autentica. Camera comoda, ottima accoglienza e ristorante davvero vivo nelle ore serali."
     },
     {
       name: "Chiara e Paolo",
@@ -28,7 +28,7 @@ const fallbackData = {
       name: "Antonio G.",
       rating: 5,
       source: "Google",
-      text: "Hotel storico di Scalea con un bel senso di ospitalita'. Aperitivo serale piacevole e contatto diretto molto pratico via WhatsApp."
+      text: "Hotel storico di Scalea con un bel senso di ospitalita'. Bar e ristorante molto frequentati la sera, contatto diretto praticissimo via WhatsApp."
     }
   ],
   rooms: [
