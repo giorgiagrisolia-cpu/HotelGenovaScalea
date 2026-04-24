@@ -37,11 +37,15 @@
   }
 
   .rooms-grid,
-  .page-links-grid,
   .reasons-grid,
   .reviews-grid,
   .events-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reasons-grid--duo {
+    grid-template-columns: repeat(2, minmax(0, 19rem));
+    justify-content: center;
   }
 
   .gallery-grid {
@@ -77,19 +81,18 @@
     gap: 2rem;
   }
 
-  .hero__media {
+  .hero__media,
+  .page-hero__media,
+  .booking-hero__media {
     max-width: 35rem;
     justify-self: end;
   }
 
-  .hero__media img {
-    aspect-ratio: 16 / 10;
-    min-height: 0;
-  }
-
+  .hero__media img,
   .page-hero__media img,
   .booking-hero__media img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
   }
 
   .section__intro--inline {
@@ -110,10 +113,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .page-links-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .reviews-grid,
   .events-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -121,6 +120,11 @@
 
   .reasons-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .reasons-grid--duo {
+    grid-template-columns: repeat(2, minmax(0, 20rem));
+    justify-content: center;
   }
 
   .section-card--reasons .reasons-grid {

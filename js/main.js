@@ -77,6 +77,17 @@ if (navToggle && siteNav) {
 const yearNode = document.querySelector("[data-year]");
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
+function setPageLinkTargets(root = document) {
+  root.querySelectorAll("a[href]").forEach((link) => {
+    const href = (link.getAttribute("href") || "").trim();
+    if (!href || href.startsWith("#") || href.startsWith("tel:") || href.startsWith("mailto:")) return;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+}
+
+setPageLinkTargets();
+
 let revealObserver;
 
 function observeReveal(items) {
@@ -124,8 +135,70 @@ function applyPlaceholderImages(root = document) {
   });
 }
 
+function initCarousels(root = document) {
+  root.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    if (carousel.dataset.carouselReady === "true") return;
+
+    const track = carousel.querySelector("[data-carousel-track]");
+    const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+    const prevButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+
+    if (!track || slides.length === 0) return;
+
+    carousel.dataset.carouselReady = "true";
+
+    if (dotsContainer) {
+      dotsContainer.innerHTML = slides
+        .map(
+          (_, slideIndex) => `
+            <button
+              class="carousel__dot${slideIndex === 0 ? " is-active" : ""}"
+              type="button"
+              data-carousel-dot="${slideIndex}"
+              aria-label="Vai alla foto ${slideIndex + 1}"
+              aria-current="${slideIndex === 0 ? "true" : "false"}"
+            ></button>
+          `
+        )
+        .join("");
+    }
+
+    const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+    let activeIndex = 0;
+
+    const updateCarousel = (nextIndex) => {
+      activeIndex = (nextIndex + slides.length) % slides.length;
+      track.style.transform = `translateX(-${activeIndex * 100}%)`;
+
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("is-active", slideIndex === activeIndex);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === activeIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", String(isActive));
+      });
+    };
+
+    prevButton?.addEventListener("click", () => updateCarousel(activeIndex - 1));
+    nextButton?.addEventListener("click", () => updateCarousel(activeIndex + 1));
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        updateCarousel(Number(dot.dataset.carouselDot));
+      });
+    });
+
+    updateCarousel(0);
+  });
+}
+
 imageLibrary = fallbackData.images;
 applyPlaceholderImages(document);
+initCarousels();
 
 function roomTemplate(room) {
   return `
