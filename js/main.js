@@ -144,6 +144,121 @@ function applyPlaceholderImages(root = document) {
   });
 }
 
+let lightboxElement;
+let lightboxSlides = [];
+let lightboxIndex = 0;
+let lightboxLastFocus = null;
+let lightboxTouchStartX = 0;
+
+function getSlideInfo(slide) {
+  const image = slide.querySelector("img");
+  const caption = slide.querySelector(".carousel__caption");
+  return {
+    src: image?.currentSrc || image?.src || "",
+    alt: image?.alt || "",
+    title: caption?.querySelector("strong")?.textContent || "",
+    text: caption?.querySelector("span")?.textContent || ""
+  };
+}
+
+function ensureLightbox() {
+  if (lightboxElement) return lightboxElement;
+
+  lightboxElement = document.createElement("div");
+  lightboxElement.className = "lightbox";
+  lightboxElement.setAttribute("aria-hidden", "true");
+  lightboxElement.innerHTML = `
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Chiudi galleria">x</button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Foto precedente">&lt;</button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__image" src="" alt="">
+        <figcaption class="lightbox__caption">
+          <strong data-lightbox-title></strong>
+          <span data-lightbox-text></span>
+          <small class="lightbox__counter" data-lightbox-counter></small>
+        </figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Foto successiva">&gt;</button>
+    </div>
+  `;
+
+  document.body.appendChild(lightboxElement);
+
+  lightboxElement.addEventListener("click", (event) => {
+    if (event.target === lightboxElement) closeLightbox();
+  });
+
+  lightboxElement.querySelector("[data-lightbox-close]")?.addEventListener("click", closeLightbox);
+  lightboxElement.querySelector("[data-lightbox-prev]")?.addEventListener("click", () => moveLightbox(-1));
+  lightboxElement.querySelector("[data-lightbox-next]")?.addEventListener("click", () => moveLightbox(1));
+
+  lightboxElement.addEventListener("touchstart", (event) => {
+    lightboxTouchStartX = event.changedTouches[0]?.clientX || 0;
+  });
+
+  lightboxElement.addEventListener("touchend", (event) => {
+    const touchEndX = event.changedTouches[0]?.clientX || 0;
+    const delta = touchEndX - lightboxTouchStartX;
+    if (Math.abs(delta) < 45) return;
+    moveLightbox(delta > 0 ? -1 : 1);
+  });
+
+  return lightboxElement;
+}
+
+function updateLightbox() {
+  if (!lightboxElement || !lightboxSlides.length) return;
+  const slide = lightboxSlides[lightboxIndex];
+  const image = lightboxElement.querySelector(".lightbox__image");
+  const title = lightboxElement.querySelector("[data-lightbox-title]");
+  const text = lightboxElement.querySelector("[data-lightbox-text]");
+  const counter = lightboxElement.querySelector("[data-lightbox-counter]");
+
+  if (image) {
+    image.src = slide.src;
+    image.alt = slide.alt;
+  }
+  if (title) title.textContent = slide.title;
+  if (text) text.textContent = slide.text;
+  if (counter) counter.textContent = `${lightboxIndex + 1} / ${lightboxSlides.length}`;
+}
+
+function openLightbox(slides, index) {
+  lightboxSlides = slides.map(getSlideInfo);
+  if (!lightboxSlides.length) return;
+  lightboxIndex = Math.min(Math.max(index, 0), lightboxSlides.length - 1);
+
+  const lightbox = ensureLightbox();
+  lightboxLastFocus = document.activeElement;
+  document.body.classList.add("has-lightbox");
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+  updateLightbox();
+  lightbox.querySelector("[data-lightbox-close]")?.focus();
+}
+
+function closeLightbox() {
+  if (!lightboxElement) return;
+  document.body.classList.remove("has-lightbox");
+  lightboxElement.classList.remove("is-open");
+  lightboxElement.setAttribute("aria-hidden", "true");
+  lightboxLastFocus?.focus?.();
+}
+
+function moveLightbox(step) {
+  if (!lightboxSlides.length) return;
+  lightboxIndex = (lightboxIndex + step + lightboxSlides.length) % lightboxSlides.length;
+  updateLightbox();
+}
+
+document.addEventListener("keydown", (event) => {
+  if (!lightboxElement?.classList.contains("is-open")) return;
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowLeft") moveLightbox(-1);
+  if (event.key === "ArrowRight") moveLightbox(1);
+});
+
 function initCarousels(root = document) {
   root.querySelectorAll("[data-carousel]").forEach((carousel) => {
     if (carousel.dataset.carouselReady === "true") return;
@@ -194,6 +309,18 @@ function initCarousels(root = document) {
 
     prevButton?.addEventListener("click", () => updateCarousel(activeIndex - 1));
     nextButton?.addEventListener("click", () => updateCarousel(activeIndex + 1));
+
+    slides.forEach((slide, slideIndex) => {
+      slide.tabIndex = 0;
+      slide.setAttribute("role", "button");
+      slide.setAttribute("aria-label", `Apri foto ${slideIndex + 1}`);
+      slide.addEventListener("click", () => openLightbox(slides, slideIndex));
+      slide.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openLightbox(slides, slideIndex);
+      });
+    });
 
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {

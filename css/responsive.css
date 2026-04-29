@@ -93,6 +93,14 @@
     font-size: 0.82rem;
   }
 
+  .page-summary span {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 0;
+    text-align: left;
+  }
+
   .hero__actions,
   .section__actions,
   .cta-row {
@@ -159,6 +167,7 @@
 
   .room-card,
   .event-card,
+  .section-card,
   .contact-card,
   .form-card,
   .info-card,
@@ -278,6 +287,7 @@
   .site-footer .footer-socials {
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
     gap: 0.35rem;
   }
 
@@ -300,6 +310,50 @@
     bottom: 0.7rem;
     padding: 0.7rem 0.8rem;
   }
+
+  .lightbox {
+    padding: 0.75rem;
+  }
+
+  .lightbox__dialog {
+    width: 100%;
+    max-height: calc(100vh - 1.5rem);
+  }
+
+  .lightbox__image {
+    max-height: 70vh;
+    border-radius: 1rem;
+  }
+
+  .lightbox__close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.45rem;
+    height: 2.45rem;
+    transform: none;
+  }
+
+  .lightbox__nav {
+    top: auto;
+    bottom: 4.2rem;
+    width: 2.55rem;
+    height: 2.55rem;
+    transform: none;
+  }
+
+  .lightbox__nav--prev {
+    left: 0.8rem;
+  }
+
+  .lightbox__nav--next {
+    right: 0.8rem;
+  }
+
+  .lightbox__close:hover,
+  .lightbox__nav--prev:hover,
+  .lightbox__nav--next:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 25rem) {
@@ -310,6 +364,10 @@
   .page-summary span,
   .page-summary a {
     flex-basis: 100%;
+  }
+
+  .page-summary span {
+    flex-basis: auto;
   }
 }
 
