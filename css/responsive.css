@@ -1,3 +1,318 @@
+@media (max-width: 47.98rem) {
+  :root {
+    --container: min(100% - 1.15rem, 76rem);
+  }
+
+  .site-header__inner {
+    min-height: 4rem;
+  }
+
+  .logo strong {
+    font-size: 1.55rem;
+  }
+
+  .logo span {
+    font-size: 0.61rem;
+    letter-spacing: 0.16em;
+  }
+
+  .site-nav {
+    inset: 4.35rem 0.6rem auto;
+    padding: 0.65rem;
+    border-radius: 1.2rem;
+  }
+
+  .site-nav a {
+    padding: 0.72rem 0.85rem;
+  }
+
+  .hero,
+  .page-hero,
+  .booking-hero {
+    padding: 1.15rem 0 2.15rem;
+  }
+
+  .hero__grid,
+  .page-hero__grid,
+  .booking-hero__grid,
+  .story-grid,
+  .split-section,
+  .contact-grid,
+  .booking-layout,
+  .details-grid,
+  .events-grid,
+  .gallery-grid,
+  .reasons-grid,
+  .rooms-grid,
+  .reviews-grid,
+  .footer-grid {
+    gap: 1.1rem;
+  }
+
+  .hero__content,
+  .page-hero__content,
+  .booking-hero__content {
+    gap: 0.7rem;
+  }
+
+  h1 {
+    font-size: clamp(2.18rem, 12vw, 2.65rem);
+    line-height: 1.03;
+  }
+
+  h2 {
+    font-size: clamp(1.78rem, 9vw, 2.35rem);
+  }
+
+  h3 {
+    font-size: 1.34rem;
+  }
+
+  .lead {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  p {
+    line-height: 1.62;
+  }
+
+  .page-summary {
+    gap: 0.5rem;
+    margin-top: 0.05rem;
+  }
+
+  .page-summary span,
+  .page-summary a {
+    flex: 1 1 calc(50% - 0.5rem);
+    justify-content: center;
+    min-height: 2.15rem;
+    padding: 0.4rem 0.65rem;
+    text-align: center;
+    font-size: 0.82rem;
+  }
+
+  .hero__actions,
+  .section__actions,
+  .cta-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.25rem, 1fr));
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+  }
+
+  .button,
+  .button-secondary {
+    width: 100%;
+    min-height: 2.85rem;
+    padding: 0.72rem 0.9rem;
+    text-align: center;
+    font-size: 0.93rem;
+  }
+
+  .site-nav .button {
+    width: auto;
+  }
+
+  .hero__media,
+  .page-hero__media,
+  .booking-hero__media {
+    justify-self: stretch;
+    border-radius: 1.35rem;
+  }
+
+  .hero__media img,
+  .page-hero__media img,
+  .booking-hero__media img {
+    aspect-ratio: 16 / 10;
+    max-height: 15rem;
+  }
+
+  .section {
+    padding: 2.35rem 0;
+  }
+
+  .section--tight {
+    padding-top: 1.2rem;
+  }
+
+  .section__inner,
+  .section__intro {
+    gap: 1rem;
+  }
+
+  .section-card,
+  .story-card__body,
+  .contact-card,
+  .form-card,
+  .reason-card,
+  .review-card,
+  .room-card__body,
+  .event-card,
+  .faq,
+  .map-card,
+  .info-card,
+  .notice-card {
+    padding: 1rem;
+  }
+
+  .room-card,
+  .event-card,
+  .contact-card,
+  .form-card,
+  .info-card,
+  .notice-card {
+    border-radius: 1.25rem;
+  }
+
+  .room-card img,
+  .story-card__media img,
+  .gallery-card img,
+  .image-card img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .carousel {
+    width: 100%;
+    gap: 0.55rem;
+    padding: 0.35rem;
+    border-radius: 1.25rem;
+  }
+
+  .carousel__viewport,
+  .carousel__slide,
+  .carousel__slide img {
+    border-radius: 1rem;
+  }
+
+  .carousel__slide img {
+    aspect-ratio: 16 / 9;
+    max-height: 13.5rem;
+  }
+
+  .carousel__caption,
+  .carousel--food .carousel__caption {
+    left: 50%;
+    right: auto;
+    bottom: 0.65rem;
+    width: calc(100% - 1.4rem);
+    max-width: none;
+    padding: 0.58rem 0.68rem;
+    text-align: center;
+    justify-items: center;
+    transform: translateX(-50%);
+  }
+
+  .carousel__caption strong {
+    font-size: 0.88rem;
+  }
+
+  .carousel__caption span {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .carousel__controls {
+    gap: 0.5rem;
+  }
+
+  .carousel__button {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .carousel__dot {
+    width: 0.65rem;
+    height: 0.65rem;
+  }
+
+  .map-card__header .button-secondary {
+    width: 100%;
+  }
+
+  .map-card__frame iframe {
+    min-height: 15rem;
+    aspect-ratio: 4 / 3;
+  }
+
+  .site-footer {
+    margin-top: 1rem;
+    padding: 1.25rem 0 0.9rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem 0.85rem;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer .logo strong {
+    font-size: 1.35rem;
+  }
+
+  .site-footer .logo span {
+    font-size: 0.58rem;
+  }
+
+  .site-footer .mini-copy {
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .footer-grid h3 {
+    font-size: 1rem;
+  }
+
+  .footer-links,
+  .footer-contact {
+    gap: 0.28rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .site-footer .footer-socials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .site-footer .footer-socials .button-secondary {
+    width: 100%;
+    min-height: 2.25rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-note {
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+    gap: 0.35rem;
+    font-size: 0.74rem;
+  }
+
+  .floating-whatsapp {
+    right: 0.7rem;
+    bottom: 0.7rem;
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-summary span,
+  .page-summary a {
+    flex-basis: 100%;
+  }
+}
+
 @media (min-width: 48rem) {
   .site-nav {
     position: static;
@@ -25,6 +340,12 @@
   .page-hero,
   .booking-hero {
     padding: 3rem 0 5rem;
+  }
+
+  .hero__media img,
+  .page-hero__media img,
+  .booking-hero__media img {
+    max-height: 25rem;
   }
 
   .story-grid,
@@ -69,6 +390,10 @@
     justify-content: space-between;
   }
 
+  .carousel__slide img {
+    max-height: 18.5rem;
+  }
+
   .floating-whatsapp span:last-child {
     display: inline;
   }
@@ -98,6 +423,11 @@
   .booking-hero__media img {
     aspect-ratio: 16 / 10;
     min-height: 0;
+    max-height: 31rem;
+  }
+
+  .carousel__slide img {
+    max-height: 21rem;
   }
 
   .section__intro--inline {
